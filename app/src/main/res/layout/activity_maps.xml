@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="iMap"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:background="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="12">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:textColor="#FFFFFF"
+            android:text="@string/settings_txt" />
+
+        <Button
+            android:id="@+id/btnLocationSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:onClick="onClickLocationSettings"
+            android:text="@string/settings"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Switch map"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="20dp"
+            android:gravity="right"
+            android:textColorHint="@color/colorPrimary"
+            tools:backgroundTint="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        >
+        <TextView
+            android:id="@+id/tvTitleGPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/provider_gps"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary">
+        </TextView>
+        <TextView
+            android:id="@+id/tvEnabledGPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="enable"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorPrimary">
+        </TextView>
+        <TextView
+            android:id="@+id/tvStatusGPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text=""
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorPrimary">
+        </TextView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvLocationGPS"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/coordinates"
+        android:paddingLeft="20dp">
+    </TextView>
+
+    <Button
+        android:id="@+id/btnFind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:onClick="onClickFindMe"
+        android:text="Find me"
+        android:background="#009688"
+        android:textColor="#FFFFFF"/>
+
+
+
+
+    <fragment
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    </fragment>
+
+
+
+</LinearLayout>

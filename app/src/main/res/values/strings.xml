@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">iMap</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="provider_gps">GPS: </string>
+    <string name="coordinates">Coordinates:</string>
+    <string name="settings_txt">Press settings to turn on GPS</string>
+    <string name="settings">Settings</string>
+
+</resources>
